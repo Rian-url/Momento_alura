@@ -1,0 +1,77 @@
+-- SCRIPT TB_JOGADOR
+
+CREATE TABLE TB_USUARIO(
+CD_USUARIO INT IDENTITY(1,1) PRIMARY KEY,
+NM_COMPLETO VARCHAR(50) NOT NULL,
+NM_APELIDO VARCHAR(20) NOT NULL,
+QT_PARTIDAS SMALLINT NOT NULL,
+QT_VITORIAS SMALLINT,
+QT_EMPATES SMALLINT,
+QT_DERROTAS SMALLINT,
+)
+
+INSERT INTO TB_USUARIO
+SELECT 
+'Ana Luiza Leao Araujo'
+,'Ana'
+,0
+,0
+,0
+,0
+
+INSERT INTO TB_USUARIO
+SELECT 
+'Edson Vinicius da Silva Pianco'
+,'Edson'
+,0
+,0
+,0
+,0	
+
+INSERT INTO TB_USUARIO
+SELECT 
+'Gabriel Vilela Carvalho de Souza'
+,'Gabriel'
+,0
+,0
+,0
+,0	
+
+INSERT INTO TB_USUARIO
+SELECT 
+'Luiz Antonio de Almeida Tavares'
+,'Luiz'
+,0
+,0
+,0
+,0	
+
+INSERT INTO TB_USUARIO
+SELECT 
+'Luciano Pereira do Nascimento'
+,'Luciano'
+,0
+,0
+,0
+,0	
+
+INSERT INTO TB_USUARIO
+SELECT 
+'Paula Ribeiro Gouvêa'
+,'Paula'
+,0
+,0
+,0
+,0	
+
+INSERT INTO TB_USUARIO
+SELECT 
+'Rian Vieira de Jesus'
+,'Rian'
+,0
+,0
+,0
+,0	
+
+
+

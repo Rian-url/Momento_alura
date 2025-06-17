@@ -56,7 +56,7 @@ class _HomePageState extends State<HomePage> {
                 height: MediaQuery.of(context).size.height * .7,
                 color: Colors.black,
               ),
-              SizedBox(width: 200),
+              const SizedBox(width: 200),
               Container(
                 width: 3,
                 height: MediaQuery.of(context).size.height * .7,
@@ -72,7 +72,7 @@ class _HomePageState extends State<HomePage> {
                 height: 3,
                 color: Colors.black,
               ),
-              SizedBox(height: 200),
+              const SizedBox(height: 200),
               Container(
                 width: MediaQuery.of(context).size.height * .7,
                 height: 3,
@@ -91,7 +91,7 @@ class _HomePageState extends State<HomePage> {
                   buildCell(2),
                 ],
               ),
-              SizedBox(height: 100),
+              const SizedBox(height: 100),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -100,7 +100,7 @@ class _HomePageState extends State<HomePage> {
                   buildCell(5),
                 ],
               ),
-              SizedBox(height: 100),
+              const SizedBox(height: 100),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -139,16 +139,16 @@ class _HomePageState extends State<HomePage> {
   Widget buildCell(int index) {
     return ElevatedButton(
       style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all(Colors.transparent),
-        shadowColor: MaterialStateProperty.all(Colors.transparent),
-        elevation: MaterialStateProperty.all(0),
-        overlayColor: MaterialStateProperty.all(Colors.transparent),
-        surfaceTintColor: MaterialStateProperty.all(Colors.transparent),
+        backgroundColor: WidgetStateProperty.all(Colors.transparent),
+        shadowColor: WidgetStateProperty.all(Colors.transparent),
+        elevation: WidgetStateProperty.all(0),
+        overlayColor: WidgetStateProperty.all(Colors.transparent),
+        surfaceTintColor: WidgetStateProperty.all(Colors.transparent),
       ),
       onPressed: () {
         handleTap(index);
       },
-      child: Container(
+      child: SizedBox(
         width: 100,
         height: 100,
         child: casas[index] == ''
@@ -167,14 +167,14 @@ class _HomePageState extends State<HomePage> {
       showDialog(
         context: context,
         builder: (context) => AlertDialog(
-          title: Text("Empate!"),
+          title: const Text("Empate!"),
           actions: [
             TextButton(
               onPressed: () {
                 Navigator.pop(context);
                 reiniciar();
               },
-              child: Text("Reiniciar"),
+              child: const Text("Reiniciar"),
             )
           ],
         ),
@@ -186,7 +186,7 @@ class _HomePageState extends State<HomePage> {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: Text("Vitória!"),
+        title: const Text("Vitória!"),
         content: Text("${!isXTurn ? 'X' : 'O'} venceu o jogo!"),
         actions: [
           TextButton(
@@ -194,7 +194,7 @@ class _HomePageState extends State<HomePage> {
               Navigator.pop(context);
               reiniciar();
             },
-            child: Text("Reiniciar"),
+            child: const Text("Reiniciar"),
           )
         ],
       ),

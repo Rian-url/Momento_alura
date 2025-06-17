@@ -56,7 +56,7 @@ class _HomePageState extends State<HomePage> {
                 height: MediaQuery.of(context).size.height * .7,
                 color: Colors.black,
               ),
-              SizedBox(width: 200),
+              const SizedBox(width: 200),
               Container(
                 width: 3,
                 height: MediaQuery.of(context).size.height * .7,
@@ -72,7 +72,7 @@ class _HomePageState extends State<HomePage> {
                 height: 3,
                 color: Colors.black,
               ),
-              SizedBox(height: 200),
+              const SizedBox(height: 200),
               Container(
                 width: MediaQuery.of(context).size.height * .7,
                 height: 3,
@@ -87,31 +87,31 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   casaWidget(0),
-                  SizedBox(width: 120),
+                  const SizedBox(width: 120),
                   casaWidget(1),
-                  SizedBox(width: 120),
+                  const SizedBox(width: 120),
                   casaWidget(2),
                 ],
               ),
-              SizedBox(height: 100),
+              const SizedBox(height: 100),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   casaWidget(3),
-                  SizedBox(width: 120),
+                  const SizedBox(width: 120),
                   casaWidget(4),
-                  SizedBox(width: 120),
+                  const SizedBox(width: 120),
                   casaWidget(5),
                 ],
               ),
-              SizedBox(height: 100),
+              const SizedBox(height: 100),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   casaWidget(6),
-                  SizedBox(width: 120),
+                  const SizedBox(width: 120),
                   casaWidget(7),
-                  SizedBox(width: 120),
+                  const SizedBox(width: 120),
                   casaWidget(8),
                 ],
               )
@@ -138,7 +138,7 @@ class _HomePageState extends State<HomePage> {
           showVitoria();
         }
       },
-      child: Container(
+      child: SizedBox(
         width: 100,
         height: 100,
         child: casas[index] == ''
@@ -185,7 +185,7 @@ class _HomePageState extends State<HomePage> {
     showDialog(
         context: context,
         builder: (context) => AlertDialog(
-              title: Text("Vitória!"),
+              title: const Text("Vitória!"),
               content: Text("${isTurnoX ? 'O' : 'X'} venceu o jogo da #"),
               actions: [
                 TextButton(
@@ -193,7 +193,7 @@ class _HomePageState extends State<HomePage> {
                       Navigator.pop(context);
                       reiniciar();
                     },
-                    child: Text("Reiniciar"))
+                    child: const Text("Reiniciar"))
               ],
             ));
   }
@@ -203,15 +203,15 @@ class _HomePageState extends State<HomePage> {
       showDialog(
           context: context,
           builder: (context) => AlertDialog(
-                title: Text("Empate!"),
-                content: Text("Deu velha"),
+                title: const Text("Empate!"),
+                content: const Text("Deu velha"),
                 actions: [
                   TextButton(
                       onPressed: () {
                         Navigator.pop(context);
                         reiniciar();
                       },
-                      child: Text("Reiniciar"))
+                      child: const Text("Reiniciar"))
                 ],
               ));
     }
